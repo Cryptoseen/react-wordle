@@ -38,7 +38,7 @@ export const Keyboard = ({
       } else if (e.code === 'Backspace') {
         onDelete()
       } else {
-        const key = localeAwareUpperCase(e.key)
+        const key = localeAwareUpperCase(e.key)('tr-TR')
         // TODO: check this test if the range works with non-english letters
         if (key.length === 1 && key >= 'A' && key <= 'Z') {
           onChar(key)
