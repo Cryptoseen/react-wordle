@@ -6,8 +6,8 @@ import { default as GraphemeSplitter } from 'grapheme-splitter'
 
 export const isWordInWordList = (word: string) => {
   return (
-    WORDS.includes(localeAwareLowerCase(word)('tr-TR')) ||
-    VALID_GUESSES.includes(localeAwareLowerCase(word)('tr-TR'))
+    WORDS.includes(localeAwareLowerCase(word)) ||
+    VALID_GUESSES.includes(localeAwareLowerCase(word))
   )
 }
 
@@ -81,7 +81,7 @@ export const getWordOfDay = () => {
   const nextday = (index + 1) * msInDay + epochMs
 
   return {
-    solution: localeAwareUpperCase('tr-TR')(WORDS[index % WORDS.length]),
+    solution: localeAwareUpperCase(WORDS[index % WORDS.length]),
     solutionIndex: index,
     tomorrow: nextday,
   }
