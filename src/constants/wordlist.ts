@@ -1,7 +1,8 @@
 export const WORDS = [
   'malıç',
   'başka',
-  'liste',
+  'murat',
+  'malıç',
   'fıkıh',
   'simya',
   'samba',
